@@ -1,0 +1,8 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('http://profilepicturesdp.com/wp-content/uploads/2018/06/geek-profile-pictures-2.png');
+  background-size: cover;
+}

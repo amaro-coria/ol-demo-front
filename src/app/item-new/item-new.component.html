@@ -1,0 +1,13 @@
+<form class="example-form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" name="name" ngModel required>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Initial Amount" name="amount" value="0" ngModel type="number">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Inventory code" name="inventory" ngModel>
+  </mat-form-field>
+  <button mat-button type="submit">Submit</button>
+  <button mat-button type="reset">Cancel</button>
+</form>

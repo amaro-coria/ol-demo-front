@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <span class="remaining-space">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item routerLink="">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item routerLink="items">
+        <mat-icon>description</mat-icon>
+        <span>Items</span>
+      </button>
+      <button mat-menu-item routerLink="new_item">
+        <mat-icon>input</mat-icon>
+        <span>New Item</span>
+      </button>
+    </mat-menu>
+  </span>
+  <span class="remaining-space">Items Demo</span>
+</mat-toolbar>
