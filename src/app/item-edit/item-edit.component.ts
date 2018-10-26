@@ -31,7 +31,8 @@ export class ItemEditComponent implements OnInit {
     this.itemService.partialUpdate(itemPartial).subscribe(
       data => {
         this.router.navigate(['items']);
-      }
+      },
+      error1 => { alert('Problem updating data!'); }
     );
   }
 

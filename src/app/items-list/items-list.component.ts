@@ -23,7 +23,8 @@ export class ItemsListComponent implements OnInit {
       data => {this.itemsList = data;
       this.dataSource = new MatTableDataSource(this.itemsList);
         this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort; }
+        this.dataSource.sort = this.sort; },
+      error1 => { alert('Problem fetching data!'); }
     );
   }
 
@@ -37,6 +38,9 @@ export class ItemsListComponent implements OnInit {
     this.itemService.deleteItem(id).subscribe(
       data => {
         this.ngOnInit();
+      },
+      error1 => {
+        alert('Problem deleting data!');
       }
     );
   }

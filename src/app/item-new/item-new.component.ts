@@ -28,7 +28,9 @@ export class ItemNewComponent implements OnInit {
       itemNo: 0
     };
     this.itemService.addItem(item).subscribe(
-      data => {this.router.navigate(['items']); });
+      data => {this.router.navigate(['items']); },
+        error => { alert('Problem editing data!'); }
+      );
   }
 
 }

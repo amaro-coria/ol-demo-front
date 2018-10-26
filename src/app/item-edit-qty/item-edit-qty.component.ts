@@ -17,7 +17,8 @@ export class ItemEditQtyComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
     this.itemService.fetchSingleItem(id).subscribe(
-      data => {this.item = data; }
+      data => {this.item = data; },
+      error1 => {alert('Problem fetching data!'); }
     );
   }
 
